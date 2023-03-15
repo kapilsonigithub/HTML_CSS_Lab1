@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Vertical Bar Chart - Animated</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                width: 100%;
+                height: 100vh;
+                background-color: darkblue;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+
+            }
+            .heading{
+                font-size: 50px;
+                padding: 40px;
+                text-align: center;
+                color: rgba(150, 150, 200, .8)
+            }
+            .container{
+                position: relative;
+                width: 600px;
+                height: 300px;
+                background-color: rgba(70,70,70,0.5);
+            }
+            .backgroundGrid{
+                position:absolute;
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+            }
+            .backgroundGrid .grid_line{
+                position: relative;
+                width: 100%;
+                height: calc(350px / 3);
+                border-top: 1px  whitesmoke;
+                z-index: 1;
+            }
+            .backgroundGrid .grid_line::before{
+                content: attr(value);
+                position: absolute;
+                left: -80px;
+                transform: translateY(-50%);
+                font-size: 18px;
+                color: darkolivegreen;
+            }
+            .stage{
+                position: absolute;
+                width: calc(100% + 14px);
+                height: 16px;
+                top: 100%;
+                left: 0;
+                background-color: rbga(0, 0, 0, 0.2);
+            }
+            .bar_container{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-end;
+                z-index: 3;
+                background-color: azure;
+            }
+            .bar_container .bar{
+                position: relative;
+                width: 40px;
+                height: 100%;
+                background-color: orange;
+                background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255,255,255,0.60) 50%, rgba(255,255,255,0.3) 100%);
+                border-radius: 100px / 30px;
+                bottom: -13px;
+
+            }
+            .bar_container .bar::before{
+                content:'';
+                position: absolute;
+                width: inherit;
+                height: 12px;
+                top: 0;
+                left: 0;
+                border-radius: 100px / 30px;
+
+            }
+            .bar_container .bar::after{
+                content: '';
+                position: absolute;
+                width: inherit;
+                height: 12px;
+                bottom: 0;
+                left: 0;
+                border-radius: 100px / 30px;
+                background-color: rgb(200, 100, 100);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="heading">My Skills</div>
+
+        <div class ="container">
+            <section class="backgroundGrid">
+                <div class="grid_line" value = "30%"></div>
+                <div class="grid_line" value = "40%"></div>
+                <div class="grid_line" value = "80%"></div>
+            </section>
+            <section class="stage"></section>
+            <section class="bar_container"></section>
+            <div class="bar" style="max-height: 30%"></div>
+            <div class="bar" style="max-height: 40%"></div>
+            <div class="bar" style="max-height: 80%"></div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+h1 {
+    color: lightgoldenrodyellow;
+    font-size:2.5vw;
+    text-align: center;
+    margin: 0%;
+    /* padding: 25px; */
+    margin-top: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+body {
+    margin: 0%;
+    background-color: rgba(255, 255, 255, 0.548);
+}
+  
+video {
+    position: fixed;
+}
+div {
+    position: relative;
+    margin: auto;
+    top: 25px;
+    min-width: 350px;
+    max-width: 350px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-left: 40px;
+}
+input {
+    width: 300px;
+    min-width: 100px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(200, 210, 210, 0.75);
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+input:focus {
+    outline: black;
+    color: white;
+    background-color: rgba(70, 130, 180, 0.35);
+  }
+button{
+    margin: 20px;
+    width: 120px;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 22px;
+    background-color: rgba(70, 130, 180, 0.85);
+}

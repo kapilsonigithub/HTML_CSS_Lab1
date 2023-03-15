@@ -1,0 +1,72 @@
+body {
+    height: auto;
+    margin: 1%;
+  }
+  
+h1 {
+    /* Set Header -- H1 properties */
+    background-color: red;
+    margin: 0%;
+    padding: 15px;
+    text-align: center;
+  }
+
+#navigateMenu {
+    /* Set Dropdown Menu to appear in bottom */
+    position: relative;
+    top: 0%;
+}
+
+.menu {
+    /* Horizontal Menu Bar properties */
+    margin: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.menu li {
+    /* Align to horizontal line with padding */
+    padding: 10px;
+    display: inline-block;
+}
+.menu li:hover {
+    /* Change hover color in drop down menu */
+    color: rgba(00,200,255,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.menu li a {
+    /* Color of Menu text written in "a" */
+    color: rgba(157, 230, 157, .8);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.dropdownLink li {
+    display: block;
+}
+.dropdownLink li:hover {
+    /* dropdownLink color change on hover */
+    background-color: yellowgreen;
+    font-size: 23px;
+    margin: auto;
+    }
+.dropdownLink li a {
+    color: steelblue;
+    font-size: 16px;
+    margin-left: 0%;
+    overflow: hidden;
+}
+.menu li:hover .dropdownLink {
+    display: block;
+    margin-left: -30px;
+    margin-top: -2px;
+    overflow: hidden;
+}
+.dropdownLink {
+    display: none;
+    position: absolute;
+    width: auto;
+    margin: -3px;
+    top: 45px;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: left;
+    overflow: hidden;
+}
